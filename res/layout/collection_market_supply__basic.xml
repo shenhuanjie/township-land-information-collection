@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/gardensLinearLayout"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        style="@style/gardensLinearLayout"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" >
+
+        <TextView
+            style="@style/gardensLeft"
+            android:text="记录名称" />
+
+        <EditText
+            android:id="@+id/edit_the_name"
+            style="@style/gardensRight" />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/gardensLinearLayout"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" >
+
+        <TextView
+            style="@style/gardensLeft"
+            android:text="记录代码" />
+
+        <EditText
+            android:id="@+id/edit_the_code"
+            style="@style/gardensRight" />
+    </LinearLayout>
+
+</LinearLayout>

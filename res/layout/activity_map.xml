@@ -1,0 +1,38 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <com.tianditu.android.maps.MapView
+        android:id="@+id/activity_map_mapview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="bottom"
+        android:background="@color/tile_half_transparent"
+        android:gravity="center_vertical|center"
+        android:visibility="gone"
+        android:orientation="horizontal" >
+
+        <ImageButton
+            android:id="@+id/activity_map_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10sp"
+            android:background="@drawable/map_globe_button_select"
+            tools:ignore="ContentDescription" />
+
+        <ImageButton
+            android:id="@+id/activity_map_point"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/btn_point_bg"
+            tools:ignore="ContentDescription" />
+
+    </LinearLayout>
+
+</FrameLayout>

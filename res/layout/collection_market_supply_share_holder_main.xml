@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/gardensLinearLayout"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        style="@style/gardensLinearLayout"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" >
+
+        <TextView
+            style="@style/gardensLeft"
+            android:text="土地所有者" />
+
+        <EditText
+            android:id="@+id/edit_tdsyz"
+            style="@style/gardensRight" />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/gardensLinearLayout"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" >
+
+        <TextView
+            style="@style/gardensLeft"
+            android:text="土地证书号" />
+
+        <EditText
+            android:id="@+id/edit_tdzsh"
+            style="@style/gardensRight" />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/gardensLinearLayout"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" >
+
+        <TextView
+            style="@style/gardensLeft"
+            android:text="土地坐落" />
+
+        <EditText
+            android:id="@+id/edit_tdzl"
+            style="@style/gardensRight" />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/gardensLinearLayout"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" >
+
+        <TextView
+            style="@style/gardensLeft"
+            android:text="权属性质" />
+
+        <Spinner
+            android:id="@+id/edit_qsxz"
+            style="@style/gardensRight"
+            android:entries="@array/qsxz" />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/gardensLinearLayout"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" >
+
+        <TextView
+            style="@style/gardensLeft"
+            android:text="出地方" />
+
+        <EditText
+            android:id="@+id/edit_cdf"
+            style="@style/gardensRight" />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/gardensLinearLayout"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" >
+
+        <TextView
+            style="@style/gardensLeft"
+            android:text="拟联营时间" />
+
+        <EditText
+            android:id="@+id/edit_nlysj"
+            style="@style/gardensRight" />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/gardensLinearLayout"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" >
+
+        <TextView
+            style="@style/gardensLeft"
+            android:text="拟联营期" />
+
+        <EditText
+            android:id="@+id/edit_nlyq"
+            style="@style/gardensRight" />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/gardensLinearLayout"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" >
+
+        <TextView
+            style="@style/gardensLeft"
+            android:text="拟出地方投入土地面积" />
+
+        <EditText
+            android:id="@+id/edit_ncdmj"   android:inputType="numberDecimal"
+            style="@style/gardensRight" />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/gardensLinearLayout"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" >
+
+        <TextView
+            style="@style/gardensLeft"
+            android:text="拟出资方投入资金总额" />
+
+        <EditText
+            android:id="@+id/edit_nczze"   android:inputType="numberDecimal"
+            style="@style/gardensRight" />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/gardensLinearLayout"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" >
+
+        <TextView
+            style="@style/gardensLeft"
+            android:text="拟出地方利润分成比例" />
+
+        <EditText
+            android:id="@+id/edit_ncdffcbl"   android:inputType="numberDecimal"
+            style="@style/gardensRight" />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/gardensLinearLayout"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" >
+
+        <TextView
+            style="@style/gardensLeft"
+            android:text="拟单位面积土地年纯收入" />
+
+        <EditText
+            android:id="@+id/edit_ntdncsr"   android:inputType="numberDecimal"
+            style="@style/gardensRight" />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/gardensLinearLayout"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" >
+
+        <TextView
+            style="@style/gardensLeft"
+            android:text="拟出地方土地年纯收入" />
+
+        <EditText
+            android:id="@+id/edit_ncdfncsr"   android:inputType="numberDecimal"
+            style="@style/gardensRight" />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/gardensLinearLayout"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" >
+
+        <TextView
+            style="@style/gardensLeft"
+            android:text="联营前用途" />
+
+        <Spinner
+            android:id="@+id/edit_lyqyt"
+            style="@style/gardensRight"
+            android:entries="@array/tdyt" />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/gardensLinearLayout"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" >
+
+        <TextView
+            style="@style/gardensLeft"
+            android:text="联营后规划用途" />
+
+        <Spinner
+            android:id="@+id/edit_lyhghyt"
+            style="@style/gardensRight"
+            android:entries="@array/tdyt" />
+    </LinearLayout>
+
+</LinearLayout>

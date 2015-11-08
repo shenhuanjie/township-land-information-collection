@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" style="@style/gardensLinearLayout"
+	android:orientation="vertical">
+	<LinearLayout style="@style/gardensLinearLayout" android:layout_marginBottom="5dp"
+		android:layout_marginLeft="10dp" android:layout_marginRight="10dp">
+
+		<TextView style="@style/gardensLeft" android:text="宗地容积率" />
+
+		<EditText android:id="@+id/other_info_ZDRJL" style="@style/gardensRight" />
+	</LinearLayout>
+
+	<LinearLayout style="@style/gardensLinearLayout" android:layout_marginBottom="10dp"
+		android:layout_marginLeft="10dp" android:layout_marginRight="10dp">
+
+		<TextView style="@style/gardensLeft" android:text="红线外开发水平" />
+
+		<Spinner android:id="@+id/other_info_HXWKFSP" style="@style/gardensRight" android:entries="@array/tdjb" />
+	</LinearLayout>
+	<LinearLayout style="@style/gardensLinearLayout" android:layout_marginBottom="10dp"
+		android:layout_marginLeft="10dp" android:layout_marginRight="10dp">
+
+		<TextView style="@style/gardensLeft" android:text="红线内开发水平" />
+
+		<Spinner android:id="@+id/other_info_HXNKFSP" style="@style/gardensRight" android:entries="@array/tdjb" />
+	</LinearLayout>
+	<LinearLayout style="@style/gardensLinearLayout" android:layout_marginBottom="10dp"
+		android:layout_marginLeft="10dp" android:layout_marginRight="10dp">
+
+		<TextView style="@style/gardensLeft" android:text="所在土地级别" />
+
+		<Spinner android:id="@+id/other_info_SZTDJB" style="@style/gardensRight" android:entries="@array/tdjb" />
+	</LinearLayout>
+	<LinearLayout style="@style/gardensLinearLayout" android:layout_marginBottom="5dp"
+		android:layout_marginLeft="10dp" android:layout_marginRight="10dp">
+
+		<TextView style="@style/gardensLeft" android:text="所在地价区段" />
+
+		<EditText android:id="@+id/other_info_SZDJQD" style="@style/gardensRight" />
+	</LinearLayout>
+	<LinearLayout style="@style/gardensLinearLayout" android:layout_marginBottom="5dp"
+		android:layout_marginLeft="10dp" android:layout_marginRight="10dp">
+
+		<TextView style="@style/gardensLeft" android:text="行政区代码（村级行政区）" />
+
+		<EditText android:id="@+id/other_info_XZQDM" style="@style/gardensRight" />
+	</LinearLayout>
+	<LinearLayout style="@style/gardensLinearLayout" android:layout_marginBottom="5dp"
+		android:layout_marginLeft="10dp" android:layout_marginRight="10dp">
+
+		<TextView style="@style/gardensLeft" android:text="录入人姓名" />
+
+		<EditText android:id="@+id/other_info_LRR" style="@style/gardensRight" />
+	</LinearLayout>
+	<LinearLayout style="@style/gardensLinearLayout" android:layout_marginBottom="5dp"
+		android:layout_marginLeft="10dp" android:layout_marginRight="10dp">
+
+		<TextView style="@style/gardensLeft" android:text="录入时间" />
+
+		<EditText android:id="@+id/other_info_LRSJ" style="@style/gardensRight" />
+	</LinearLayout>
+	<LinearLayout style="@style/gardensLinearLayout" android:layout_marginBottom="5dp"
+		android:layout_marginLeft="10dp" android:layout_marginRight="10dp">
+
+		<TextView style="@style/gardensLeft" android:text="项目地块区域" />
+
+		<EditText android:id="@+id/other_info_XMDKQY" style="@style/gardensRight" />
+	</LinearLayout>
+</LinearLayout>

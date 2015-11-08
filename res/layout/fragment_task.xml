@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#d0d0d0"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/linearLayout1"
+            android:layout_width="fill_parent"
+            android:layout_height="45dp"
+            android:background="#ffffff"
+            android:gravity="center" >
+
+           <!--  <TextView
+                android:id="@+id/fragment_task_tv_tab_1"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0"
+                android:background="@drawable/textview_selector"
+                android:clickable="true"
+                android:gravity="center"
+                android:text="待采集项目"
+                android:textColor="#000000"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:layout_width="@dimen/divide_px_middle"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="3dp"
+                android:layout_marginTop="3dp"
+                android:background="@color/background_grey_middle" /> -->
+
+            <TextView
+                android:id="@+id/fragment_task_tv_tab_2"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0"
+                android:background="@drawable/textview_selector"
+                android:clickable="true"
+                android:gravity="center"
+                android:text="待同步信息"
+                android:textColor="#000000"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:layout_width="@dimen/divide_px_middle"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="3dp"
+                android:layout_marginTop="3dp"
+                android:background="@color/background_grey_middle" />
+
+            <TextView
+                android:id="@+id/fragment_task_tv_tab_3"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0"
+                android:background="@drawable/textview_selector"
+                android:clickable="true"
+                android:gravity="center"
+                android:text="已同步信息"
+                android:textColor="#000000"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:orientation="vertical"
+            android:paddingBottom="3dp" >
+
+            <ImageView
+                android:id="@+id/iv_bottom_line"
+                android:layout_width="100dp"
+                android:layout_height="2dp"
+                android:scaleType="matrix"
+                android:src="@drawable/iconfont_chat" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- android:scaleType="matrix" -->
+
+    <com.example.town_land_collect.view.XListView
+        android:id="@+id/fragment_task_xlistview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_weight="1.0"
+        android:background="#ffffff"
+        android:flipInterval="30"
+        android:persistentDrawingCache="animation" >
+    </com.example.town_land_collect.view.XListView>
+
+</LinearLayout>

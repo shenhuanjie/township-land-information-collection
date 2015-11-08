@@ -1,0 +1,530 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/gardensLinearLayout"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        style="@style/gardensLinearLayout"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" >
+
+        <TextView
+            style="@style/gardensLeft"
+            android:text="标识码" />
+
+        <EditText
+            android:id="@+id/edit_bsm"
+            style="@style/gardensRight" />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/gardensLinearLayout"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" >
+
+        <TextView
+            style="@style/gardensLeft"
+            android:text="区段编号" />
+
+        <EditText
+            android:id="@+id/edit_qdbh"
+            style="@style/gardensRight" />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/gardensLinearLayout"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" >
+
+        <TextView
+            style="@style/gardensLeft"
+            android:text="区段名称" />
+
+        <EditText
+            android:id="@+id/edit_qdmc"
+            style="@style/gardensRight" />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/gardensLinearLayout"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" >
+
+        <TextView
+            style="@style/gardensLeft"
+            android:text="区段位置" />
+
+        <EditText
+            android:id="@+id/edit_qdwz"
+            style="@style/gardensRight" />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/gardensLinearLayout"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" >
+
+        <TextView
+            style="@style/gardensLeft"
+            android:text="业态类型" />
+
+        <EditText
+            android:id="@+id/edit_ytlx"
+            style="@style/gardensRight" />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/gardensLinearLayout"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" >
+
+        <TextView
+            style="@style/gardensLeft"
+            android:text="土地级别" />
+
+        <Spinner
+            android:id="@+id/edit_tdjb"
+            style="@style/gardensRight"
+            android:entries="@array/tdjb" />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/gardensLinearLayout"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" >
+
+        <TextView
+            style="@style/gardensLeft"
+            android:text="区段面积" />
+
+        <EditText
+            android:id="@+id/edit_qdmj"
+            style="@style/gardensRight"
+            android:inputType="numberDecimal" />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/gardensLinearLayout"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" >
+
+        <TextView
+            style="@style/gardensLeft"
+            android:text="实际用途面积" />
+
+        <EditText
+            android:id="@+id/edit_sjytmj"
+            style="@style/gardensRight"
+            android:inputType="numberDecimal" />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/gardensLinearLayout"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" >
+
+        <TextView
+            style="@style/gardensLeft"
+            android:text="行政区代码" />
+
+        <EditText
+            android:id="@+id/edit_xzqdm"
+            style="@style/gardensRight" />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/gardensLinearLayout"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" >
+
+        <TextView
+            style="@style/gardensLeft"
+            android:text="区段基础设施状况" />
+
+        <EditText
+            android:id="@+id/edit_qdjcsszk"
+            style="@style/gardensRight" />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/gardensLinearLayout"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" >
+
+        <TextView
+            style="@style/gardensLeft"
+            android:text="区段公共公用设施状况" />
+
+        <EditText
+            android:id="@+id/edit_qdggsszk"
+            style="@style/gardensRight" />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/gardensLinearLayout"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" >
+
+        <TextView
+            style="@style/gardensLeft"
+            android:text="东至" />
+
+        <EditText
+            android:id="@+id/edit_dz"
+            style="@style/gardensRight" />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/gardensLinearLayout"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" >
+
+        <TextView
+            style="@style/gardensLeft"
+            android:text="南至" />
+
+        <EditText
+            android:id="@+id/edit_nz"
+            style="@style/gardensRight" />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/gardensLinearLayout"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" >
+
+        <TextView
+            style="@style/gardensLeft"
+            android:text="西至" />
+
+        <EditText
+            android:id="@+id/edit_xz"
+            style="@style/gardensRight" />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/gardensLinearLayout"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" >
+
+        <TextView
+            style="@style/gardensLeft"
+            android:text="北至" />
+
+        <EditText
+            android:id="@+id/edit_bz"
+            style="@style/gardensRight" />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/gardensLinearLayout"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" >
+
+        <TextView
+            style="@style/gardensLeft"
+            android:text="商服路线起点" />
+
+        <EditText
+            android:id="@+id/edit_qd"
+            style="@style/gardensRight" />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/gardensLinearLayout"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" >
+
+        <TextView
+            style="@style/gardensLeft"
+            android:text="商服路线止点" />
+
+        <EditText
+            android:id="@+id/edit_zd"
+            style="@style/gardensRight" />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/gardensLinearLayout"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" >
+
+        <TextView
+            style="@style/gardensLeft"
+            android:text="现状容积率" />
+
+        <EditText
+            android:id="@+id/edit_xzrjl"
+            style="@style/gardensRight"
+            android:inputType="number" />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/gardensLinearLayout"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" >
+
+        <TextView
+            style="@style/gardensLeft"
+            android:text="主要商服类型" />
+
+        <EditText
+            android:id="@+id/edit_zysylx"
+            style="@style/gardensRight" />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/gardensLinearLayout"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" >
+
+        <TextView
+            style="@style/gardensLeft"
+            android:text="建成年份及建筑物状况" />
+
+        <EditText
+            android:id="@+id/edit_jcnf"
+            style="@style/gardensRight" />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/gardensLinearLayout"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" >
+
+        <TextView
+            style="@style/gardensLeft"
+            android:text="现时最高年租金" />
+
+        <EditText
+            android:id="@+id/edit_xszgzj"
+            style="@style/gardensRight"
+            android:inputType="numberDecimal" />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/gardensLinearLayout"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" >
+
+        <TextView
+            style="@style/gardensLeft"
+            android:text="现时平均年租金" />
+
+        <EditText
+            android:id="@+id/edit_xspjzj"
+            style="@style/gardensRight"
+            android:inputType="numberDecimal" />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/gardensLinearLayout"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" >
+
+        <TextView
+            style="@style/gardensLeft"
+            android:text="现时最低年租金" />
+
+        <EditText
+            android:id="@+id/edit_xszdzj"
+            style="@style/gardensRight"
+            android:inputType="numberDecimal" />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/gardensLinearLayout"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" >
+
+        <TextView
+            style="@style/gardensLeft"
+            android:text="现时最高售价" />
+
+        <EditText
+            android:id="@+id/edit_xszgsj"
+            style="@style/gardensRight"
+            android:inputType="numberDecimal" />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/gardensLinearLayout"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" >
+
+        <TextView
+            style="@style/gardensLeft"
+            android:text="现时平均售价" />
+
+        <EditText
+            android:id="@+id/edit_xspjsj"
+            style="@style/gardensRight"
+            android:inputType="numberDecimal" />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/gardensLinearLayout"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" >
+
+        <TextView
+            style="@style/gardensLeft"
+            android:text="现时最低售价" />
+
+        <EditText
+            android:id="@+id/edit_xszdsj"
+            style="@style/gardensRight"
+            android:inputType="numberDecimal" />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/gardensLinearLayout"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" >
+
+        <TextView
+            style="@style/gardensLeft"
+            android:text="评估基准日" />
+
+        <EditText
+            android:id="@+id/edit_jzr"
+            style="@style/gardensRight" />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/gardensLinearLayout"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" >
+
+        <TextView
+            style="@style/gardensLeft"
+            android:text="设定年期" />
+
+        <EditText
+            android:id="@+id/edit_sdnq"
+            style="@style/gardensRight" />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/gardensLinearLayout"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" >
+
+        <TextView
+            style="@style/gardensLeft"
+            android:text="设定容积率" />
+
+        <EditText
+            android:id="@+id/edit_sdrjl"
+            style="@style/gardensRight"
+            android:inputType="number" />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/gardensLinearLayout"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" >
+
+        <TextView
+            style="@style/gardensLeft"
+            android:text="设定开发水平" />
+
+        <Spinner
+            android:id="@+id/edit_sdkfsp"
+            style="@style/gardensRight"
+            android:entries="@array/sdkfsp" />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/gardensLinearLayout"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" >
+
+        <TextView
+            style="@style/gardensLeft"
+            android:text="商业路线标准深度" />
+
+        <EditText
+            android:id="@+id/edit_sylxbzsd"
+            style="@style/gardensRight" />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/gardensLinearLayout"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" >
+
+        <TextView
+            style="@style/gardensLeft"
+            android:text="地面基准地价" />
+
+        <EditText
+            android:id="@+id/edit_dmjzdj"
+            style="@style/gardensRight"
+            android:inputType="numberDecimal" />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/gardensLinearLayout"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" >
+
+        <TextView
+            style="@style/gardensLeft"
+            android:text="楼面基准地价" />
+
+        <EditText
+            android:id="@+id/edit_lmjzdj"
+            style="@style/gardensRight"
+            android:inputType="numberDecimal" />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/gardensLinearLayout"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" >
+
+        <TextView
+            style="@style/gardensLeft"
+            android:text="备注" />
+
+        <EditText
+            android:id="@+id/edit_remark"
+            style="@style/gardensRight" />
+    </LinearLayout>
+
+</LinearLayout>

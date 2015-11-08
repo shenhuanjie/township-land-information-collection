@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<litepal>
+	<dbname value="townDB"></dbname>
+
+	<version value="6"></version>
+
+	<list>
+		<!-- 采集记录信息表 -->
+		<mapping class="com.example.town_land_collect.model.LocationInfo"></mapping>
+		<mapping class="com.example.town_land_collect.model.AttachmentEntity"></mapping>
+		<!-- 土地交易信息 -->
+		<mapping class="com.example.town_land_collect.model.market_business.ModelCollectionMarketBusinessHouseRent"></mapping>
+		<mapping class="com.example.town_land_collect.model.market_business.ModelCollectionMarketBusinessHouseSell"></mapping>
+		<mapping class="com.example.town_land_collect.model.market_business.ModelCollectionMarketBusinessRentOut"></mapping>
+		<mapping class="com.example.town_land_collect.model.market_business.ModelCollectionMarketBusinessSell"></mapping>
+		<mapping class="com.example.town_land_collect.model.market_business.ModelCollectionMarketBusinessShareHolder"></mapping>
+		<mapping class="com.example.town_land_collect.model.market_business.ModelCollectionMarketBusinessTransfer"></mapping>
+		<!-- 土地需求信息 -->
+		<mapping class="com.example.town_land_collect.model.market_demand.ModelCollectionMarketDemandHouseRent"></mapping>
+		<mapping class="com.example.town_land_collect.model.market_demand.ModelCollectionMarketDemandHouseSell"></mapping>
+		<mapping class="com.example.town_land_collect.model.market_demand.ModelCollectionMarketDemandRent"></mapping>
+		<mapping class="com.example.town_land_collect.model.market_demand.ModelCollectionMarketDemandSell"></mapping>
+		<mapping class="com.example.town_land_collect.model.market_demand.ModelCollectionMarketDemandShareHolder"></mapping>
+		<mapping class="com.example.town_land_collect.model.market_demand.ModelCollectionMarketDemandTransfer"></mapping>
+		<!-- 开发项目信息 -->
+		<mapping class="com.example.town_land_collect.model.market_development.ModelCollectionMarketDevelopmentTownship"></mapping>
+		<mapping class="com.example.town_land_collect.model.market_development.ModelCollectionMarketDevelopmentVillage"></mapping>
+		<!-- 市场监控信息 -->
+		<mapping class="com.example.town_land_collect.model.market_monitor.ModelCollectionMarketMonitorLandLevel"></mapping>
+		<mapping class="com.example.town_land_collect.model.market_monitor.ModelCollectionMarketMonitorLandValue"></mapping>
+		<mapping class="com.example.town_land_collect.model.market_monitor.ModelCollectionMarketMonitorPoint"></mapping>
+		<!-- 再开发项目信息 -->
+		<mapping class=" com.example.town_land_collect.model.market_redevelopment.ModelCollectionMarketRedevelopmentImpose"></mapping>
+		<mapping class=" com.example.town_land_collect.model.market_redevelopment.ModelCollectionMarketRedevelopmentPlan"></mapping>
+		<!-- 土地供应信息 -->
+		<mapping class="com.example.town_land_collect.model.market_supply.ModelCollectionMarketSupplyHouseRent"></mapping>
+		<mapping class="com.example.town_land_collect.model.market_supply.ModelCollectionMarketSupplyHouseSell"></mapping>
+		<mapping class="com.example.town_land_collect.model.market_supply.ModelCollectionMarketSupplyRent"></mapping>
+		<mapping class="com.example.town_land_collect.model.market_supply.ModelCollectionMarketSupplySell"></mapping>
+		<mapping class="com.example.town_land_collect.model.market_supply.ModelCollectionMarketSupplyShareHolder"></mapping>
+		<mapping class="com.example.town_land_collect.model.market_supply.ModelCollectionMarketSupplyTransfer"></mapping>
+	</list>
+</litepal>

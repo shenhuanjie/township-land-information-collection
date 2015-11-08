@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        style="@style/gardensLinearLayout"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" >
+
+        <TextView
+            style="@style/gardensLeft"
+            android:text="需求现状土地条件" />
+
+        <EditText
+            android:id="@+id/house_rent_farm_in_XQXZTDTJ"
+            style="@style/gardensRight" />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/gardensLinearLayout"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" >
+
+        <TextView
+            style="@style/gardensLeft"
+            android:text="需求出租时间" />
+
+        <EditText
+            android:id="@+id/house_rent_farm_in_XQCZSJ"
+            style="@style/gardensRight" />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/gardensLinearLayout"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" >
+
+        <TextView
+            style="@style/gardensLeft"
+            android:text="需求租期" />
+
+        <EditText
+            android:id="@+id/house_rent_farm_in_XQZQ"
+            style="@style/gardensRight" />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/gardensLinearLayout"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" >
+
+        <TextView
+            style="@style/gardensLeft"
+            android:text="需求土地出租面积" />
+
+        <LinearLayout style="@style/gardensRight" >
+
+            <EditText
+                android:id="@+id/house_rent_farm_in_XQTDCZMJ"
+                style="@style/gardensRight"
+                android:layout_weight="15"
+                android:inputType="numberDecimal" />
+
+            <TextView
+                style="@style/gardensRight"
+                android:layout_weight="80"
+                android:text="平方米" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/gardensLinearLayout"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" >
+
+        <TextView
+            style="@style/gardensLeft"
+            android:text="出租前用途" />
+
+        <EditText
+            android:id="@+id/house_rent_farm_in_CZQYT"
+            style="@style/gardensRight" />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/gardensLinearLayout"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" >
+
+        <TextView
+            style="@style/gardensLeft"
+            android:text="拟出租后用途" />
+
+        <EditText
+            android:id="@+id/house_rent_farm_in_NCZHYT"
+            style="@style/gardensRight" />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/gardensLinearLayout"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" >
+
+        <TextView
+            style="@style/gardensLeft"
+            android:text="土地剩余使用年期" />
+
+        <EditText
+            android:id="@+id/house_rent_farm_in_TDSYSYNQ"
+            style="@style/gardensRight" />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/gardensLinearLayout"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" >
+
+        <TextView
+            style="@style/gardensLeft"
+            android:text="需求年租金" />
+
+        <LinearLayout style="@style/gardensRight" >
+
+            <EditText
+                android:id="@+id/house_rent_farm_in_XQNZJ"
+                style="@style/gardensRight"
+                android:layout_weight="15"
+                android:inputType="numberDecimal" />
+
+            <TextView
+                style="@style/gardensRight"
+                android:layout_weight="80"
+                android:text="万元" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/gardensLinearLayout"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" >
+
+        <TextView
+            style="@style/gardensLeft"
+            android:text="拟押金" />
+
+        <LinearLayout style="@style/gardensRight" >
+
+            <EditText
+                android:id="@+id/house_rent_farm_in_NYJ"
+                style="@style/gardensRight"
+                android:layout_weight="15"
+                android:inputType="numberDecimal" />
+
+            <TextView
+                style="@style/gardensRight"
+                android:layout_weight="80"
+                android:text="万元" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

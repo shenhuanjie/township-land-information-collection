@@ -1,0 +1,74 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TableLayout
+        style="@style/table"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp" >
+
+        <!-- 表格布局：第一行 -->
+
+        <TableRow style="@style/table_header" >
+
+            <TextView
+                style="@style/login_label"
+                android:layout_height="fill_parent"
+                android:text="@string/edit_psw_old" >
+            </TextView>
+
+            <EditText
+                android:id="@+id/activity_edit_oldpsw"
+                style="@style/login_text" >
+            </EditText>
+        </TableRow>
+
+        <TableRow style="@style/table_header" >
+
+            <TextView
+                style="@style/login_label"
+                android:text="@string/edit_psw_new" >
+            </TextView>
+
+            <EditText
+                android:id="@+id/activity_edit_newpsw"
+                style="@style/login_text"
+                android:inputType="textPassword" >
+            </EditText>
+        </TableRow>
+
+        <TableRow style="@style/table_header" >
+
+            <TextView
+                style="@style/login_label"
+                android:text="@string/edit_psw_confirm" >
+            </TextView>
+
+            <EditText
+                android:id="@+id/activity_edit_confirm_psw"
+                style="@style/login_text"
+                android:inputType="textPassword" >
+            </EditText>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/table_corner_no_no_bottom" >
+        </TableRow>
+    </TableLayout>
+
+    <Button
+        android:id="@+id/login_btn_login"
+        android:layout_width="match_parent"
+        android:layout_height="40dip"
+        android:layout_gravity="center"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/button_bg"
+        android:text="@string/edit_psw_button" />
+
+</LinearLayout>

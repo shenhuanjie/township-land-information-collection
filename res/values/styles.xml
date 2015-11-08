@@ -1,0 +1,88 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+
+    <!-- 采集相关 -->
+    <!-- 背景样式	-->
+	<style name="background_style" parent="@style/common_style">
+		<item name="android:background">#F8F8F8</item>
+	</style>
+    <style name="common_style">
+	    <item name="android:textColor">#5F5F5F</item>
+	    <item name="android:textSize">14.0sp</item>
+	</style>
+	<!-- 两列显示基本样式，每一行基本样式 -->
+   <style name="gardensLinearLayout">
+      <item name="android:layout_width">fill_parent</item>
+      <item name="android:layout_height">wrap_content</item>
+      <item name="android:gravity">center_vertical</item>
+      <item name="android:padding">1.0dip</item>
+   </style>
+   	<!--两列显示基本样式，左侧列25%，右侧占75%-->
+   <style name="gardensLeft" parent="@style/common_style">
+     	<item name="android:layout_width">fill_parent</item>
+      	<item name="android:layout_height">wrap_content</item>
+      	<item name="android:layout_weight">80</item> 
+      	<item name="android:gravity">left</item>  
+      	<item name="android:layout_marginRight">5.0dip</item>  
+   </style>
+   <!--两列显示基本样式，左侧列25%，右侧占75%-->
+   <style name="gardensRight" parent="@style/common_style">
+     	<item name="android:layout_width">fill_parent</item>
+      	<item name="android:layout_height">wrap_content</item>
+      	<item name="android:gravity">left</item>
+      	<item name="android:layout_gravity">center_vertical</item>
+      	<item name="android:singleLine">true</item>        
+      	<item name="android:layout_weight">25</item>    
+   </style>
+   <!--	分隔线样式	-->
+	<style name="divider_style">
+		<item name="android:layout_height">1px</item>
+		<item name="android:background">@color/solid_gray</item>
+	</style>
+	
+	<style name="table">
+        <item name="android:layout_width">fill_parent</item>
+		<item name="android:layout_height">wrap_content</item>
+	    <item name="android:padding">10dip</item>
+    </style>
+    <style name="table_header" parent="table">
+		<item name="android:background">@drawable/table_corner_top_no_bottom</item>
+    </style>
+    <style name="table_footer"  parent="table">
+		<item name="android:background">@drawable/table_corner_bottom_no_top</item>
+    </style>
+     <!-- login -->
+    <style name="login_label"> 
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">#000000</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:layout_marginRight">10dip</item>
+    </style> 
+    <style name="login_text">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:background">@drawable/background_shape</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">#000000</item>
+    </style>
+</resources>

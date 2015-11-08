@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+	android:layout_height="match_parent" android:orientation="vertical">
+
+
+	<LinearLayout style="@style/gardensLinearLayout" android:layout_marginBottom="10dp"
+		android:layout_marginLeft="10dp" android:layout_marginRight="10dp">
+
+		<TextView style="@style/gardensLeft" android:text="土地用途" />
+
+		<Spinner android:id="@+id/house_sell_farm_in_TDYT" style="@style/gardensRight" android:entries="@array/tdjb" />
+	</LinearLayout>
+
+	<LinearLayout style="@style/gardensLinearLayout" android:layout_marginBottom="10dp"
+		android:layout_marginLeft="10dp" android:layout_marginRight="10dp">
+
+		<TextView style="@style/gardensLeft" android:text="临街宽度" />
+
+		<LinearLayout style="@style/gardensRight">
+
+			<EditText android:id="@+id/house_sell_farm_in_LJKD" style="@style/gardensRight" android:layout_weight="15"
+				android:inputType="numberDecimal" />
+
+			<TextView style="@style/gardensRight" android:layout_weight="80" android:text="米" />
+		</LinearLayout>
+	</LinearLayout>
+
+	<LinearLayout style="@style/gardensLinearLayout" android:layout_marginBottom="10dp"
+		android:layout_marginLeft="10dp" android:layout_marginRight="10dp">
+
+		<TextView style="@style/gardensLeft" android:text="临街深度" />
+
+		<LinearLayout style="@style/gardensRight">
+
+			<EditText android:id="@+id/house_sell_farm_in_LJSD" style="@style/gardensRight" android:layout_weight="15"
+				android:inputType="numberDecimal" />
+
+			<TextView style="@style/gardensRight" android:layout_weight="80" android:text="米" />
+		</LinearLayout>
+	</LinearLayout>
+
+	<LinearLayout style="@style/gardensLinearLayout" android:layout_marginBottom="10dp"
+		android:layout_marginLeft="10dp" android:layout_marginRight="10dp">
+
+		<TextView style="@style/gardensLeft" android:text="建筑类型" />
+
+		<Spinner android:id="@+id/house_sell_farm_in_JZLX" style="@style/gardensRight" android:entries="@array/tdjb" />
+	</LinearLayout>
+
+	<LinearLayout style="@style/gardensLinearLayout" android:layout_marginBottom="5dp"
+		android:layout_marginLeft="10dp" android:layout_marginRight="10dp">
+
+		<TextView style="@style/gardensLeft" android:text="建筑层数" />
+
+		<EditText android:id="@+id/house_sell_farm_in_JZCS" style="@style/gardensRight" />
+	</LinearLayout>
+
+	<LinearLayout style="@style/gardensLinearLayout" android:layout_marginBottom="10dp"
+		android:layout_marginLeft="10dp" android:layout_marginRight="10dp">
+
+		<TextView style="@style/gardensLeft" android:text="房屋结构" />
+
+		<Spinner android:id="@+id/house_sell_farm_in_FWJG" style="@style/gardensRight" android:entries="@array/tdjb" />
+	</LinearLayout>
+
+	<LinearLayout style="@style/gardensLinearLayout" android:layout_marginBottom="5dp"
+		android:layout_marginLeft="10dp" android:layout_marginRight="10dp">
+
+		<TextView style="@style/gardensLeft" android:text="竣工时间" />
+
+		<EditText android:id="@+id/house_sell_farm_in_JGSJ" style="@style/gardensRight" />
+	</LinearLayout>
+
+	<LinearLayout style="@style/gardensLinearLayout" android:layout_marginBottom="10dp"
+		android:layout_marginLeft="10dp" android:layout_marginRight="10dp">
+
+		<TextView style="@style/gardensLeft" android:text="房屋成新度" />
+
+		<Spinner android:id="@+id/house_sell_farm_in_FWCXD" style="@style/gardensRight" android:entries="@array/tdjb" />
+	</LinearLayout>
+
+	<LinearLayout style="@style/gardensLinearLayout" android:layout_marginBottom="5dp"
+		android:layout_marginLeft="10dp" android:layout_marginRight="10dp">
+
+		<TextView style="@style/gardensLeft" android:text="装修时间" />
+
+		<EditText android:id="@+id/house_sell_farm_in_ZXSJ" style="@style/gardensRight" />
+	</LinearLayout>
+
+	<LinearLayout style="@style/gardensLinearLayout" android:layout_marginBottom="10dp"
+		android:layout_marginLeft="10dp" android:layout_marginRight="10dp">
+
+		<TextView style="@style/gardensLeft" android:text="装修程度" />
+
+		<Spinner android:id="@+id/house_sell_farm_in_ZXCD" style="@style/gardensRight" android:entries="@array/tdjb" />
+	</LinearLayout>
+
+	<LinearLayout style="@style/gardensLinearLayout" android:layout_marginBottom="5dp"
+		android:layout_marginLeft="10dp" android:layout_marginRight="10dp">
+
+		<TextView style="@style/gardensLeft" android:text="出售楼层" />
+
+		<EditText android:id="@+id/house_sell_farm_in_CSLC" style="@style/gardensRight" />
+	</LinearLayout>
+
+	<LinearLayout style="@style/gardensLinearLayout" android:layout_marginBottom="10dp"
+		android:layout_marginLeft="10dp" android:layout_marginRight="10dp">
+
+		<TextView style="@style/gardensLeft" android:text="出售用途" />
+
+		<Spinner android:id="@+id/house_sell_farm_in_CSYT" style="@style/gardensRight" android:entries="@array/tdjb" />
+	</LinearLayout>
+
+	<LinearLayout style="@style/gardensLinearLayout" android:layout_marginBottom="10dp"
+		android:layout_marginLeft="10dp" android:layout_marginRight="10dp">
+
+		<TextView style="@style/gardensLeft" android:text="出售建筑面积" />
+
+		<LinearLayout style="@style/gardensRight">
+
+			<EditText android:id="@+id/house_sell_farm_in_CSJZMJ" style="@style/gardensRight" android:layout_weight="15"
+				android:inputType="numberDecimal" />
+
+			<TextView style="@style/gardensRight" android:layout_weight="80" android:text="平方米" />
+		</LinearLayout>
+	</LinearLayout>
+
+	<LinearLayout style="@style/gardensLinearLayout" android:layout_marginBottom="5dp"
+		android:layout_marginLeft="10dp" android:layout_marginRight="10dp">
+
+		<TextView style="@style/gardensLeft" android:text="出售时间" />
+
+		<EditText android:id="@+id/house_sell_farm_in_CSSJ" style="@style/gardensRight" />
+	</LinearLayout>
+
+
+	<LinearLayout style="@style/gardensLinearLayout" android:layout_marginBottom="10dp"
+		android:layout_marginLeft="10dp" android:layout_marginRight="10dp">
+
+		<TextView style="@style/gardensLeft" android:text="售价" />
+
+		<LinearLayout style="@style/gardensRight">
+
+			<EditText android:id="@+id/house_sell_farm_in_SJ" style="@style/gardensRight" android:layout_weight="15"
+				android:inputType="numberDecimal" />
+
+			<TextView style="@style/gardensRight" android:layout_weight="80" android:text="万元" />
+		</LinearLayout>
+	</LinearLayout>
+
+	<LinearLayout style="@style/gardensLinearLayout" android:layout_marginBottom="10dp"
+		android:layout_marginLeft="10dp" android:layout_marginRight="10dp">
+
+		<TextView style="@style/gardensLeft" android:text="税费" />
+
+		<LinearLayout style="@style/gardensRight">
+
+			<EditText android:id="@+id/house_sell_farm_in_SF" style="@style/gardensRight" android:layout_weight="15"
+				android:inputType="numberDecimal" />
+
+			<TextView style="@style/gardensRight" android:layout_weight="80" android:text="万元" />
+		</LinearLayout>
+	</LinearLayout>
+
+</LinearLayout>

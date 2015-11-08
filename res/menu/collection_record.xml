@@ -1,0 +1,17 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.town_land_collect.CollectionRecordActivity" >
+
+    <item
+        android:id="@+id/action_download_record"
+        android:orderInCategory="100"
+        android:title="同步记录"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/action_upload_record"
+        android:orderInCategory="100"
+        android:title="上传记录"
+        app:showAsAction="never"/>
+
+</menu>

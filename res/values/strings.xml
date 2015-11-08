@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="app_name">信息采集</string>
+    <string name="action_feed">意见反馈</string>
+    <string name="action_group_map">资源地图</string>
+    <string name="action_add_friend">新增任务</string>
+    <string name="action_scan">拍照上传</string>
+    <string name="action_search">搜索</string>
+    <string name="action_add">添加</string>
+    <string name="tab_index">主页</string>
+    <string name="tab_collection">信息采集</string>
+    <string name="tab_task">采集记录</string>
+    <string name="tab_map">个人中心</string>
+    <string name="title_activity_about">常见问题</string>
+    <string name="title_activity_new">新闻</string>
+    <string name="title_activity_new_content">信息详情</string>
+    <string name="title_activity_task_content">任务详情</string>
+    <string name="title_activity_map">地图</string>
+    <string name="title_activity_edit_psw">修改密码</string>
+    <string name="title_choose_date">请选择日期</string>
+
+    <!-- listview相关 -->
+    <string name="xlistview_header_hint_normal">下拉刷新</string>
+    <string name="xlistview_header_hint_ready">松开刷新数据</string>
+    <string name="xlistview_header_hint_loading">正在加载#8230</string>
+    <string name="xlistview_header_last_time">上次更新时间：</string>
+    <string name="xlistview_footer_hint_normal">查看更多</string>
+    <string name="xlistview_footer_hint_ready">松开载入更多</string>
+    <string name="title_activity_collection_record">采集列表</string>
+    <string name="title_activity_edit_collection">信息编辑</string>
+    <string name="title_activity_map_resources">资源地图</string>
+    <string name="title_activity_detail_collection">信息详情</string>
+
+    <!-- imagebutton相关 -->
+    <string name="ibtn_collection_head_clear_content_description">清空</string>
+    <string name="ibtn_collection_head_save_content_description">保存</string>
+    <string name="ibtn_collection_location_content_description">选择位置信息</string>
+
+    <!-- imageview相关 -->
+    <string name="imageview_collection_head_nophoto">无显示图片</string>
+
+    <!-- textview相关 -->
+    <string name="edit_collection_photo">照    片</string>
+    <string name="edit_collection_sell">出让/受让信息</string>
+    <string name="edit_collection_transfer">转让/受让信息</string>
+    <string name="edit_collection_location">位置信息</string>
+    <string name="edit_collection_others">其它信息</string>
+    <string name="edit_collection_system">系统信息</string>
+
+    <!-- business -->
+    <string name="edit_collection_business_rent">出租交易信息</string>
+    <string name="edit_collection_business_sell">出售交易信息</string>
+    <string name="edit_collection_business_share_holder">入股交易信息</string>
+    <string name="edit_collection_business_transfer">转让交易信息</string>
+
+    <!-- 基本信息 -->
+    <string name="edit_collection_basic_info_jlmc">记录名称</string>
+    <string name="edit_collection_basic_info_jldm">记录代码</string>
+    <string name="edit_collection_basic_info_tdsyz">土地所有者</string>
+    <string name="edit_collection_basic_info_tdzsh">土地证书号</string>
+    <string name="edit_collection_basic_info_tdzl">土地坐落</string>
+    <string name="edit_collection_basic_info_qsxz">权属性质</string>
+    <!-- 单位 -->
+    <string name="edit_collection_basic_centiare">平方米</string>
+    <string name="edit_collection_basic_univalence">元/平方米</string>
+    <string name="edit_collection_basic_millon">万元</string>
+    <!-- 出让/受让信息 -->
+    <string name="edit_market_business_sell_farm_in_crsj">出让时间</string>
+    <string name="edit_market_business_sell_farm_in_srf">受让方</string>
+    <string name="edit_market_business_sell_farm_in_crfs">出让方式</string>
+    <string name="edit_market_business_sell_farm_in_sfzkf">是否再开发</string>
+    <string name="edit_market_business_sell_farm_in_sflyd">是否留用地</string>
+    <string name="edit_market_business_sell_farm_in_ghtdmj">规划红线范围土地面积</string>
+    <string name="edit_market_business_sell_farm_in_dztdmj">代征土地面积</string>
+    <string name="edit_market_business_sell_farm_in_sjcrmj">实际出让面积</string>
+    <string name="edit_market_business_sell_farm_in_crqyt">出让前用途</string>
+    <string name="edit_market_business_sell_farm_in_crhyt">出让后用途</string>
+    <string name="edit_market_business_sell_farm_in_crnq">出让年期</string>
+    <string name="edit_market_business_sell_farm_in_dwmjtdcrj">单位面积土地出让价</string>
+    <string name="edit_market_business_sell_farm_in_tdcrzj">土地出让总价</string>
+    <!-- 转让/受让信息 -->
+    <string name="edit_market_business_transfer_farm_in_zrsj">转让时间</string>
+    <string name="edit_market_business_transfer_farm_in_zrf">转让方</string>
+    <string name="edit_market_business_transfer_farm_in_srf">受让方</string>
+    <string name="edit_market_business_transfer_farm_in_zrfs">转让方式</string>
+    <string name="edit_market_business_transfer_farm_in_tdzrnj">土地转让面积</string>
+    <string name="edit_market_business_transfer_farm_in_zrqyt">转让前用途</string>
+    <string name="edit_market_business_transfer_farm_in_zrhyt">转让后用途</string>
+    <string name="edit_market_business_transfer_farm_in_tdsysynq">土地剩余使用年期</string>
+    <string name="edit_market_business_transfer_farm_in_tdzrdj">土地转让单价</string>
+    <string name="edit_market_business_transfer_farm_in_tdzrzj">土地转让总价</string>
+    <!-- 位置信息 -->
+    <string name="edit_collection_location_info_lon">经度</string>
+    <string name="edit_collection_location_info_lat">纬度</string>
+    <string name="edit_collection_location_info_bjdmc">标记点名称</string>
+    <string name="edit_collection_location_info_bjdmc_hint">便于在地图上查看</string>
+    <string name="edit_collection_location_info_zbxt">坐标系统</string>
+    <string name="edit_collection_location_info_mark">备注</string>
+    <!-- 其他信息 -->
+    <string name="edit_collection_other_info_zdrjl">宗地容积率</string>
+    <string name="edit_collection_other_info_hxwkfsp">红线外开发水平</string>
+    <string name="edit_collection_other_info_hxnkfsp">红线内开发水平</string>
+    <string name="edit_collection_other_info_sztdjb">所在土地级别</string>
+    <string name="edit_collection_other_info_szdjqd">所在地址区段</string>
+    <string name="edit_collection_other_info_xzqdm">行政区代码（村级行政区）</string>
+    <string name="edit_collection_other_info_cjyh">创建用户</string>
+    <string name="edit_collection_other_info_cjsj">创建时间</string>
+    <string name="edit_collection_other_info_xmdkqy">项目地块区域</string>
+    <!-- 系统字段 -->
+    <string name="title_activity_result_map">ResultMapActivity</string>
+    <string name="title_activity_edit_collection_market_business_sell">EditCollectionMarketBusinessSellActivity</string>
+    <string name="title_activity_edit_collection_market_business_house_rent">EditCollectionMarketBusinessHouseRentActivity</string>
+    <string name="title_activity_edit_collection_market_business_house_sell">EditCollectionMarketBusinessHouseSellActivity</string>
+    <string name="title_activity_edit_collection_market_business_rent_out">EditCollectionMarketBusinessRentOutActivity</string>
+    <string name="title_activity_edit_collection_market_business_share_holder">EditCollectionMarketBusinessShareHolderActivity</string>
+    <string name="title_activity_edit_collection_market_business_transfer">EditCollectionMarketBusinessTransferActivity</string>
+    <string name="title_activity_edit_collection_market_demand_house_rent">EditCollectionMarketDemandHouseRentActivity</string>
+    <string name="title_activity_edit_collection_market_demand_house_sell">EditCollectionMarketDemandHouseSellActivity</string>
+    <string name="title_activity_edit_collection_market_demand_rent">EditCollectionMarketDemandRentActivity</string>
+    <string name="title_activity_edit_collection_market_demand_sell">EditCollectionMarketDemandSellActivity</string>
+    <string name="title_activity_edit_collection_market_demand_share_holder">EditCollectionMarketDemandShareHolderActivity</string>
+    <string name="title_activity_edit_collection_market_demand_transfer">EditCollectionMarketDemandTransferActivity</string>
+    <string name="title_activity_edit_collection_market_monitor_land_level">EditCollectionMarketMonitorLandLevelActivity</string>
+    <string name="title_activity_edit_collection_market_monitor_land_value">EditCollectionMarketMonitorLandValueActivity</string>
+    <string name="title_activity_edit_collection_market_monitor_point">EditCollectionMarketMonitorPointActivity</string>
+    <string name="title_activity_edit_collection_market_supply_house_rent">EditCollectionMarketSupplyHouseRentActivity</string>
+    <string name="title_activity_edit_collection_market_supply_house_sell">EditCollectionMarketSupplyHouseSellActivity</string>
+    <string name="title_activity_edit_collection_market_supply_rent">EditCollectionMarketSupplyRentActivity</string>
+    <string name="title_activity_edit_collection_market_supply_sell">EditCollectionMarketSupplySellActivity</string>
+    <string name="title_activity_edit_collection_market_supply_share_holder">EditCollectionMarketSupplyShareHolderActivity</string>
+    <string name="title_activity_edit_collection_market_supply_transfer">EditCollectionMarketSupplyTransferActivity</string>
+    <string name="title_activity_edit_collection_market_development_township">EditCollectionMarketDevelopmentTownshipActivity</string>
+    <string name="title_activity_edit_collection_market_development_village">EditCollectionMarketDevelopmentVillageActivity</string>
+    <string name="title_activity_edit_collection_market_redevelopment_impose">EditCollectionMarketRedevelopmentImposeActivity</string>
+    <string name="title_activity_edit_collection_market_redevelopment_plan">EditCollectionMarketRedevelopmentPlanActivity</string>
+
+</resources>

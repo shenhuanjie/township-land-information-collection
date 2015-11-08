@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        style="@style/gardensLinearLayout"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" >
+
+        <TextView
+            style="@style/gardensLeft"
+            android:text="需求出让时间" />
+
+        <EditText
+            android:id="@+id/house_rent_farm_in_XQCRSJ"
+            style="@style/gardensRight" />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/gardensLinearLayout"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" >
+
+        <TextView
+            style="@style/gardensLeft"
+            android:text="需求出让方式" />
+
+        <EditText
+            android:id="@+id/house_rent_farm_in_XQCRFS"
+            style="@style/gardensRight" />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/gardensLinearLayout"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" >
+
+        <TextView
+            style="@style/gardensLeft"
+            android:text="拟需求出让面积" />
+
+        <EditText
+            android:id="@+id/house_rent_farm_in_NXQCRMJ"
+            style="@style/gardensRight" />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/gardensLinearLayout"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" >
+
+        <TextView
+            style="@style/gardensLeft"
+            android:text="出让前用途" />
+
+        <EditText
+            android:id="@+id/house_rent_farm_in_CRQYT"
+            style="@style/gardensRight" />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/gardensLinearLayout"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" >
+
+        <TextView
+            style="@style/gardensLeft"
+            android:text="拟出让后用途" />
+
+        <EditText
+            android:id="@+id/house_rent_farm_in_NCRHYT"
+            style="@style/gardensRight" />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/gardensLinearLayout"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" >
+
+        <TextView
+            style="@style/gardensLeft"
+            android:text="需求出让年期" />
+
+        <EditText
+            android:id="@+id/house_rent_farm_in_XQCRNQ"
+            style="@style/gardensRight" />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/gardensLinearLayout"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" >
+
+        <TextView
+            style="@style/gardensLeft"
+            android:text="需求现状土地条件" />
+
+        <EditText
+            android:id="@+id/house_rent_farm_in_XQXZTDTJ"
+            style="@style/gardensRight" />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/gardensLinearLayout"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" >
+
+        <TextView
+            style="@style/gardensLeft"
+            android:text="需求单位面积土地出让价" />
+
+        <LinearLayout style="@style/gardensRight" >
+
+            <EditText
+                android:id="@+id/house_rent_farm_in_XQDWMJTDCRJ"
+                style="@style/gardensRight"
+                android:layout_weight="15"
+                android:inputType="numberDecimal" />
+
+            <TextView
+                style="@style/gardensRight"
+                android:layout_weight="80"
+                android:text="元/平方米" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/gardensLinearLayout"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" >
+
+        <TextView
+            style="@style/gardensLeft"
+            android:text="需求土地出让总价" />
+
+        <LinearLayout style="@style/gardensRight" >
+
+            <EditText
+                android:id="@+id/house_rent_farm_in_XQTDCRZJ"
+                style="@style/gardensRight"
+                android:layout_weight="15"
+                android:inputType="numberDecimal" />
+
+            <TextView
+                style="@style/gardensRight"
+                android:layout_weight="80"
+                android:text="万元" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/gardensLinearLayout"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" >
+
+        <TextView
+            style="@style/gardensLeft"
+            android:text="拟投资强度" />
+
+        <LinearLayout style="@style/gardensRight" >
+
+            <EditText
+                android:id="@+id/house_rent_farm_in_NTZQD"
+                style="@style/gardensRight"
+                android:layout_weight="15"
+                android:inputType="numberDecimal" />
+
+            <TextView
+                style="@style/gardensRight"
+                android:layout_weight="80"
+                android:text="万元" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/gardensLinearLayout"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" >
+
+        <TextView
+            style="@style/gardensLeft"
+            android:text="拟开发投资总额" />
+
+        <LinearLayout style="@style/gardensRight" >
+
+            <EditText
+                android:id="@+id/house_rent_farm_in_NKFTZZE"
+                style="@style/gardensRight"
+                android:layout_weight="15"
+                android:inputType="numberDecimal" />
+
+            <TextView
+                style="@style/gardensRight"
+                android:layout_weight="80"
+                android:text="万元" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

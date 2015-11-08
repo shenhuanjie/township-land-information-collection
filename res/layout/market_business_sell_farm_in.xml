@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" style="@style/gardensLinearLayout"
+	android:orientation="vertical">
+
+	<LinearLayout style="@style/gardensLinearLayout" android:layout_marginBottom="5dp"
+		android:layout_marginLeft="10dp" android:layout_marginRight="10dp">
+
+		<TextView style="@style/gardensLeft" android:text="@string/edit_market_business_sell_farm_in_crsj" />
+
+		<EditText android:id="@+id/sell_farm_in_CRSJ" style="@style/gardensRight" />
+	</LinearLayout>
+
+	<LinearLayout style="@style/gardensLinearLayout" android:layout_marginBottom="5dp"
+		android:layout_marginLeft="10dp" android:layout_marginRight="10dp">
+
+		<TextView style="@style/gardensLeft" android:text="@string/edit_market_business_sell_farm_in_srf" />
+
+		<EditText android:id="@+id/sell_farm_in_SRF" style="@style/gardensRight" />
+	</LinearLayout>
+
+	<LinearLayout style="@style/gardensLinearLayout" android:layout_marginBottom="10dp"
+		android:layout_marginLeft="10dp" android:layout_marginRight="10dp">
+
+		<TextView style="@style/gardensLeft" android:text="@string/edit_market_business_sell_farm_in_crfs" />
+
+		<Spinner android:id="@+id/sell_farm_in_CRFS" style="@style/gardensRight" android:entries="@array/tdjb" />
+	</LinearLayout>
+
+	<LinearLayout style="@style/gardensLinearLayout" android:layout_marginBottom="10dp"
+		android:layout_marginLeft="10dp" android:layout_marginRight="10dp">
+
+		<TextView style="@style/gardensLeft" android:text="@string/edit_market_business_sell_farm_in_sfzkf" />
+
+		<Spinner android:id="@+id/sell_farm_in_SFZKF" style="@style/gardensRight" android:entries="@array/tdjb" />
+	</LinearLayout>
+
+	<LinearLayout style="@style/gardensLinearLayout" android:layout_marginBottom="10dp"
+		android:layout_marginLeft="10dp" android:layout_marginRight="10dp">
+
+		<TextView style="@style/gardensLeft" android:text="@string/edit_market_business_sell_farm_in_sflyd" />
+
+		<Spinner android:id="@+id/sell_farm_in_SFLYD" style="@style/gardensRight" android:entries="@array/tdjb" />
+	</LinearLayout>
+
+	<LinearLayout style="@style/gardensLinearLayout" android:layout_marginBottom="10dp"
+		android:layout_marginLeft="10dp" android:layout_marginRight="10dp">
+
+		<TextView style="@style/gardensLeft" android:text="@string/edit_market_business_sell_farm_in_ghtdmj" />
+
+		<LinearLayout style="@style/gardensRight">
+
+			<EditText android:id="@+id/sell_farm_in_GHTDMJ" style="@style/gardensRight" android:layout_weight="15"
+				android:inputType="numberDecimal" />
+
+			<TextView style="@style/gardensRight" android:layout_weight="80" android:text="@string/edit_collection_basic_centiare" />
+		</LinearLayout>
+	</LinearLayout>
+
+	<LinearLayout style="@style/gardensLinearLayout" android:layout_marginBottom="10dp"
+		android:layout_marginLeft="10dp" android:layout_marginRight="10dp">
+
+		<TextView style="@style/gardensLeft" android:text="@string/edit_market_business_sell_farm_in_dztdmj" />
+
+		<LinearLayout style="@style/gardensRight">
+
+			<EditText android:id="@+id/sell_farm_in_DZTDMJ" style="@style/gardensRight" android:layout_weight="15"
+				android:inputType="numberDecimal" />
+
+			<TextView style="@style/gardensRight" android:layout_weight="80" android:text="@string/edit_collection_basic_centiare" />
+		</LinearLayout>
+	</LinearLayout>
+
+	<LinearLayout style="@style/gardensLinearLayout" android:layout_marginBottom="10dp"
+		android:layout_marginLeft="10dp" android:layout_marginRight="10dp">
+
+		<TextView style="@style/gardensLeft" android:text="@string/edit_market_business_sell_farm_in_sjcrmj" />
+
+		<LinearLayout style="@style/gardensRight">
+
+			<EditText android:id="@+id/sell_farm_in_SJCRMJ" style="@style/gardensRight" android:layout_weight="15"
+				android:inputType="numberDecimal" />
+
+			<TextView style="@style/gardensRight" android:layout_weight="80" android:text="@string/edit_collection_basic_centiare" />
+		</LinearLayout>
+	</LinearLayout>
+
+	<LinearLayout style="@style/gardensLinearLayout" android:layout_marginBottom="5dp"
+		android:layout_marginLeft="10dp" android:layout_marginRight="10dp">
+
+		<TextView style="@style/gardensLeft" android:text="@string/edit_market_business_sell_farm_in_crqyt" />
+
+		<EditText android:id="@+id/sell_farm_in_CRQYT" style="@style/gardensRight" />
+	</LinearLayout>
+
+	<LinearLayout style="@style/gardensLinearLayout" android:layout_marginBottom="5dp"
+		android:layout_marginLeft="10dp" android:layout_marginRight="10dp">
+
+		<TextView style="@style/gardensLeft" android:text="@string/edit_market_business_sell_farm_in_crhyt" />
+
+		<EditText android:id="@+id/sell_farm_in_CRHYT" style="@style/gardensRight" />
+	</LinearLayout>
+
+	<LinearLayout style="@style/gardensLinearLayout" android:layout_marginBottom="5dp"
+		android:layout_marginLeft="10dp" android:layout_marginRight="10dp">
+
+		<TextView style="@style/gardensLeft" android:text="@string/edit_market_business_sell_farm_in_crnq" />
+
+		<EditText android:id="@+id/sell_farm_in_CRNQ" style="@style/gardensRight" />
+	</LinearLayout>
+
+	<LinearLayout style="@style/gardensLinearLayout" android:layout_marginBottom="10dp"
+		android:layout_marginLeft="10dp" android:layout_marginRight="10dp">
+
+		<TextView style="@style/gardensLeft" android:text="@string/edit_market_business_sell_farm_in_dwmjtdcrj" />
+
+		<LinearLayout style="@style/gardensRight">
+
+			<EditText android:id="@+id/sell_farm_in_DWMJTDCRJ" style="@style/gardensRight" android:layout_weight="15"
+				android:inputType="numberDecimal" />
+
+			<TextView style="@style/gardensRight" android:layout_weight="80" android:text="@string/edit_collection_basic_univalence" />
+		</LinearLayout>
+	</LinearLayout>
+
+	<LinearLayout style="@style/gardensLinearLayout" android:layout_marginBottom="10dp"
+		android:layout_marginLeft="10dp" android:layout_marginRight="10dp">
+
+		<TextView style="@style/gardensLeft" android:text="@string/edit_market_business_sell_farm_in_tdcrzj" />
+
+		<LinearLayout style="@style/gardensRight">
+
+			<EditText android:id="@+id/sell_farm_in_TDCRZJ" style="@style/gardensRight" android:layout_weight="15"
+				android:inputType="numberDecimal" />
+
+			<TextView style="@style/gardensRight" android:layout_weight="80" android:text="@string/edit_collection_basic_millon" />
+		</LinearLayout>
+	</LinearLayout>
+
+</LinearLayout>

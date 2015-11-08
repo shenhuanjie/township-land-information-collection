@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="background_grey"> #EEEEEE</color>
+    <color name="background_grey_light"> #E0E0E0</color>
+    <color name="background_grey_middle">#B0B0B0</color>
+    <color name="background_grey_max"> #606060</color>
+    <color name="solid_blue">#0000ff</color>
+    <color name="solid_gray">#778899</color>
+    <color name="tile_orange">#FFD700</color>
+    <color name="tile_blue">#6959CD</color>
+    <color name="tile_water_blue">#ADD8E6</color>
+    <color name="tile_white"> #FFFFFF</color>
+    <color name="tile_half_transparent"> #b0000000</color>
+    <color name="title_transparent"> #00000000</color>
+    <color name="tile_green">#ADFF2F</color>
+    <color name="tile_purple">#EE7AE9</color>
+    <color name="tile_red">#FF4500</color>
+    <color name="backgroud_transparent_full">#00000000</color>
+
+</resources>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="edit_psw_old">旧密码</string>
+    <string name="edit_psw_new">新密码</string>
+    <string name="edit_psw_confirm">确认密码</string>
+    <string name="edit_psw_button">确认修改</string>
+</resources>

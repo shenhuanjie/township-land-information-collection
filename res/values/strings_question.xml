@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="q1">1.软件适用的安卓系统版本是多少？</string>
+    <string name="a1">此版本适用于Android4.0及以上固件。</string>
+    <string name="q2">2.为什么定位一直不成功？</string>
+    <string name="a2">请打开GPS定位功能，最好能在室外进行定位。</string>
+    <string name="q3">3.什么是天地图API？</string>
+    <string name="a3">天地图API将“天地图”的数据及功能服务资源以应用接口的形式对外开放，旨在为开发者提供快速调用“天地图”地理信息服务的通道，开发者可以利用天地图API轻松将“天地图”丰富的地图功能嵌入到各类应用系统、网站或移动终端应用中，以此来实现各类增值服务及应用。</string>
+    <string name="q4">4.天地图数据覆盖情况如何？</string>
+    <string name="a4">天地图提供覆盖全球范围的矢量数据、影像数据和地形数据，全国范围的导航电子地图数据和卫星遥感影像数据，265个城市和区县建成区的高分辨率遥感影像及133个城市和区县建成区的高分辨率航空影像数据，超过2000万条的地名地址数据和POI（兴趣点）数据，以及部分城市的三维模型数据等资源。</string>
+    <string name="q5">5.有时候页面切换时会出现闪屏、黑屏？</string>
+    <string name="a5">一般在资源地图页面切换回到主界面时会出现闪屏或者黑屏的现象，这属于正常现象。</string>
+    <string name="q6">6.滑动切换页面感觉不流畅？</string>
+    <string name="a6">由于个别页面控件加载太多，系统需要有时间进行处理，特别是信息采集页面，因此切换到此页面时会出现不流畅的感觉。</string>
+    <string name="copyright_chinese">友元公司  版权所有</string>
+    <string name="copyright_english">Copyright©2015 YouYuan.All Rights Reserved.</string>
+</resources>
