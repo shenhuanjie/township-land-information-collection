@@ -11,7 +11,6 @@ import rmobile.platform.http.AsyncHttpResponseHandler;
 import rmobile.platform.http.RSyncHttpClient;
 import android.content.Context;
 import android.graphics.Bitmap;
-import android.provider.Settings;
 
 import com.example.town_land_collect.commom.basic.Common;
 import com.example.town_land_collect.commom.basic.MyWebService;
@@ -43,7 +42,7 @@ import com.example.town_land_collect.model.market_supply.ModelCollectionMarketSu
 import com.example.town_land_collect.model.market_supply.ModelCollectionMarketSupplyShareHolder;
 import com.example.town_land_collect.model.market_supply.ModelCollectionMarketSupplyTransfer;
 import com.example.town_land_collect.util.CollectType;
-import com.example.town_land_collect.util.ImageUtil;
+import com.example.town_land_collect.util.PictureUtil;
 
 public class WebService extends MyWebService {
 	Common common = new Common();
@@ -98,7 +97,9 @@ public class WebService extends MyWebService {
 		/** 根据表单类型,构造传输参数 **/
 		paramsList.add(setNameValuePair("tableName", tablename));
 		paramsList.add(setNameValuePair("id", locationInfo.getUploadId() + ""));
-		Bitmap camorabitmap = ImageUtil.getImageUploadThumbnail(info.getImageUri(), 1000, 1000);
+		// 压缩图片质量，用于上传服务器
+		Bitmap camorabitmap = PictureUtil.getSmallUploadBitmap(info.getImageUri());
+
 		paramsList.add(setNameValuePair("img64Str", Common.bitmapToBase64(camorabitmap)));
 		return paramsList;
 	}

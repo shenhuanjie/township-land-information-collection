@@ -1,13 +1,13 @@
 package com.example.town_land_collect.fragment_market_business;
 
 import java.io.File;
+import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
-import org.litepal.crud.DataSupport;
 import org.litepal.exceptions.DataSupportException;
 
 import android.annotation.SuppressLint;
@@ -19,7 +19,6 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
-import android.os.Environment;
 import android.provider.MediaStore;
 import android.support.v4.app.Fragment;
 import android.text.Editable;
@@ -45,7 +44,6 @@ import android.widget.Toast;
 
 import com.example.town_land_collect.R;
 import com.example.town_land_collect.activity.MyMapActivity;
-import com.example.town_land_collect.model.AttachmentEntity;
 import com.example.town_land_collect.model.LocationInfo;
 import com.example.town_land_collect.model.market_business.ModelCollectionMarketBusinessHouseRent;
 import com.example.town_land_collect.util.AttachmentUtil;
@@ -53,6 +51,7 @@ import com.example.town_land_collect.util.CollectType;
 import com.example.town_land_collect.util.ComUtil;
 import com.example.town_land_collect.util.CommonTypeUtil;
 import com.example.town_land_collect.util.ImageUtil;
+import com.example.town_land_collect.util.PictureUtil;
 import com.example.town_land_collect.util.ToastUtil;
 
 /**
@@ -66,16 +65,19 @@ import com.example.town_land_collect.util.ToastUtil;
  */
 @SuppressLint({ "CutPasteId", "ClickableViewAccessibility" })
 public class Collection_Market_Business_House_Rent extends Fragment implements OnClickListener, OnTouchListener {
+	// TODO
+	private String mCurrentPhotoPath;// 图片路径
+
 	private String imagePathString = null;
 
 	private final String IMAGE_TYPE = "image/*";
-	private final int IMAGE_CODE = 0; // 这里的IMAGE_CODE是自己任意定义的
+	private final int IMAGE_CODE = 0;
 	private List<String> imagePathList = new ArrayList<String>();
 	private int imagePathListIndex = 0;
 	private Bitmap camorabitmap = null;
 	private Button image_left;// 图片上一张
 	private Button image_right;// 图片下一张
-	// TODO
+
 	private TextView text_page;
 	private TextView text_total;
 
@@ -240,7 +242,7 @@ public class Collection_Market_Business_House_Rent extends Fragment implements O
 		image_left.setOnClickListener(this);
 		image_right = (Button) view.findViewById(R.id.fragment_collection_right);
 		image_right.setOnClickListener(this);
-		// TODO
+
 		text_page = (TextView) view.findViewById(R.id.textViewPage);
 		text_total = (TextView) view.findViewById(R.id.textViewTotal);
 
@@ -792,7 +794,6 @@ public class Collection_Market_Business_House_Rent extends Fragment implements O
 				camorabitmap = ImageUtil.getImageThumbnail(filePath, width, height);
 				image_photo.setImageBitmap(camorabitmap);
 
-				// TODO
 				text_page.setText("第" + (imagePathListIndex + 1) + "张");
 				text_total.setText(",共" + imagePathList.size() + "张");
 			}
@@ -811,11 +812,30 @@ public class Collection_Market_Business_House_Rent extends Fragment implements O
 				String filePath = imagePathList.get(imagePathListIndex);
 				camorabitmap = ImageUtil.getImageThumbnail(filePath, width, height);
 				image_photo.setImageBitmap(camorabitmap);
-				// TODO
+
 				text_page.setText("第" + (imagePathListIndex + 1) + "张");
 				text_total.setText(",共" + imagePathList.size() + "张");
 			}
 		}
+	}
+
+	/**
+	 * 把程序拍摄的照片放到 SD卡的 Pictures目录中 upload 文件夹中
+	 * 照片的命名规则为：image_20130125_173729.jpg
+	 * 
+	 * @return TODO
+	 * @throws IOException
+	 */
+	@SuppressLint("SimpleDateFormat")
+	private File createImageFile() throws IOException {
+
+		SimpleDateFormat format = new SimpleDateFormat("yyyyMMdd_HHmmss");
+		String timeStamp = format.format(new Date());
+		String imageFileName = "image_" + timeStamp + ".jpg";
+
+		File image = new File(PictureUtil.getAlbumDir(), imageFileName);
+		mCurrentPhotoPath = image.getAbsolutePath();
+		return image;
 	}
 
 	private void getPhotoImage() {
@@ -823,16 +843,16 @@ public class Collection_Market_Business_House_Rent extends Fragment implements O
 		new AlertDialog.Builder(getActivity()).setTitle("选择操作").setItems(items, new DialogInterface.OnClickListener() {
 			@Override
 			public void onClick(DialogInterface dialog, int which) {
-				Uri imageUri = null;
 				if (which == 0) {
 					Intent getImageByCamera = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-					if (Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED)) {
-						imageUri = Uri.fromFile(new File(Environment.getExternalStorageDirectory(), "temp.jpg"));
-					} else {
-						imageUri = Uri.fromFile(new File(File.separator, "temp.jpg"));
+					try {
+						// 指定存放拍摄照片的位置
+						File f = createImageFile();
+						getImageByCamera.putExtra(MediaStore.EXTRA_OUTPUT, Uri.fromFile(f));
+						startActivityForResult(getImageByCamera, ComUtil.RequestCode_Photo);
+					} catch (Exception e) {
+						e.printStackTrace();
 					}
-					getImageByCamera.putExtra(MediaStore.EXTRA_OUTPUT, imageUri);
-					startActivityForResult(getImageByCamera, ComUtil.RequestCode_Photo);
 				} else if (which == 1) {
 					// 使用intent调用系统提供的相册功能，使用startActivityForResult是为了获取用户选择的图片
 					Intent getAlbum = new Intent(Intent.ACTION_GET_CONTENT);
@@ -858,7 +878,7 @@ public class Collection_Market_Business_House_Rent extends Fragment implements O
 						} else {
 							image_photo.setImageDrawable(getResources().getDrawable(R.drawable.nophoto));
 						}
-						// TODO
+
 						text_page.setText("第" + (imagePathListIndex + 1) + "张");
 						text_total.setText(",共" + imagePathList.size() + "张");
 					}
@@ -1127,13 +1147,8 @@ public class Collection_Market_Business_House_Rent extends Fragment implements O
 			}
 		}
 
-		// 获取返回的图片内容
+		// TODO:获取返回的图片内容
 		if (requestCode == ComUtil.RequestCode_Photo_Value) {
-
-			DisplayMetrics metric = new DisplayMetrics();
-			getParentFragment().getActivity().getWindowManager().getDefaultDisplay().getMetrics(metric);
-			int width = metric.widthPixels; // 屏幕宽度（像素）
-			int height = metric.heightPixels; // 屏幕高度（像素）
 
 			try {
 				// 先判断是否已经回收
@@ -1141,14 +1156,14 @@ public class Collection_Market_Business_House_Rent extends Fragment implements O
 					camorabitmap.recycle();
 					camorabitmap = null;
 				}
-				// 将保存在本地的图片取出并按比例缩小后显示在界面上
-				camorabitmap = ImageUtil.getImageThumbnail(Environment.getExternalStorageDirectory() + "/temp.jpg", width, height);
+				// 添加到图库,这样可以在手机的图库程序中看到程序拍摄的照片
+				PictureUtil.galleryAddPic(this.getActivity(), mCurrentPhotoPath);
+
+				camorabitmap = PictureUtil.getSmallBitmap(mCurrentPhotoPath);
 				image_photo.setImageBitmap(camorabitmap);
-				String filePath = ImageUtil.copyFile(Environment.getExternalStorageDirectory() + "/temp.jpg",
-						Environment.getExternalStorageDirectory() + "/");
-				imagePathList.add(filePath);
+				imagePathList.add(mCurrentPhotoPath);
 				imagePathListIndex = imagePathList.size() - 1;
-				// TODO
+
 				text_page.setText("第" + (imagePathListIndex + 1) + "张");
 				text_total.setText(",共" + imagePathList.size() + "张");
 
@@ -1156,10 +1171,6 @@ public class Collection_Market_Business_House_Rent extends Fragment implements O
 				e.printStackTrace();
 			}
 		} else if (requestCode == ComUtil.RequestCode_Album) {
-			DisplayMetrics metric = new DisplayMetrics();
-			getParentFragment().getActivity().getWindowManager().getDefaultDisplay().getMetrics(metric);
-			int width = metric.widthPixels; // 屏幕宽度（像素）
-			int height = metric.heightPixels; // 屏幕高度（像素）
 			try {
 				// 先判断是否已经回收
 				if (camorabitmap != null && !camorabitmap.isRecycled()) {
@@ -1167,13 +1178,14 @@ public class Collection_Market_Business_House_Rent extends Fragment implements O
 					camorabitmap = null;
 				}
 				Uri originalUri = data.getData(); // 获得图片的uri
-				String filePath = ImageUtil.getImageAbsolutePath(getActivity(), originalUri);
+				mCurrentPhotoPath = ImageUtil.getImageAbsolutePath(getActivity(), originalUri);
 				// 将保存在本地的图片取出并按比例缩小后显示在界面上
-				camorabitmap = ImageUtil.getImageThumbnail(filePath, width, height);
+				camorabitmap = PictureUtil.getSmallBitmap(mCurrentPhotoPath);
+
 				image_photo.setImageBitmap(camorabitmap);
-				imagePathList.add(filePath);
+				imagePathList.add(mCurrentPhotoPath);
 				imagePathListIndex = imagePathList.size() - 1;
-				// TODO
+
 				text_page.setText("第" + (imagePathListIndex + 1) + "张");
 				text_total.setText(",共" + imagePathList.size() + "张");
 			} catch (Exception e) {
