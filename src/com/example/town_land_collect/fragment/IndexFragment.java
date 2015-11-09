@@ -51,8 +51,8 @@ public class IndexFragment extends Fragment implements IXListViewListener,
 	}
 
 	private List<New_Introduce> getPageList() {
-		locationInfos = DataSupport.offset(start).limit(limit)
-				.find(LocationInfo.class);
+		// Records in descending order
+		locationInfos = DataSupport.offset(start).limit(limit).order("date desc").find(LocationInfo.class);
 
 		for (LocationInfo locationInfo : locationInfos) {
 			New_Introduce new_Introduce = new New_Introduce();

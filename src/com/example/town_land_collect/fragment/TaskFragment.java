@@ -5,7 +5,6 @@ import java.util.List;
 
 import org.litepal.crud.DataSupport;
 
-import android.R.integer;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.os.Bundle;
@@ -25,7 +24,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.town_land_collect.R;
-import com.example.town_land_collect.activity.CollectionRecordActivity;
 import com.example.town_land_collect.activity.edit_collection.collection_market_business.EditCollectionMarketBusinessHouseRentActivity;
 import com.example.town_land_collect.activity.edit_collection.collection_market_business.EditCollectionMarketBusinessHouseSellActivity;
 import com.example.town_land_collect.activity.edit_collection.collection_market_business.EditCollectionMarketBusinessRentOutActivity;
@@ -115,7 +113,8 @@ public class TaskFragment extends Fragment implements IXListViewListener, OnItem
 		int start = state == 0 ? unsync_start : sync_start;
 		int limit = state == 0 ? unsync_limit : sync_limit;
 
-		locatinoInfos = DataSupport.where("stateCode = ?", String.valueOf(state)).offset(start).limit(limit).find(LocationInfo.class);
+		// Records in descending order
+		locatinoInfos = DataSupport.where("stateCode = ?", String.valueOf(state)).offset(start).limit(limit).order("date desc").find(LocationInfo.class);
 
 		for (LocationInfo locationInfo : locatinoInfos) {
 			Task_Introduce task_Introduce = new Task_Introduce();
