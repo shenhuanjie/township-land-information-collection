@@ -30,15 +30,12 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.town_land_collect.R;
 import com.example.town_land_collect.activity.MyMapActivity;
 import com.example.town_land_collect.model.LocationInfo;
 import com.example.town_land_collect.model.market_development.ModelCollectionMarketDevelopmentTownship;
-import com.example.town_land_collect.model.market_supply.ModelCollectionMarketSupplyRent;
-import com.example.town_land_collect.model.market_supply.ModelCollectionMarketSupplySell;
-import com.example.town_land_collect.model.market_supply.ModelCollectionMarketSupplyShareHolder;
-import com.example.town_land_collect.model.market_supply.ModelCollectionMarketSupplyTransfer;
 import com.example.town_land_collect.util.CollectType;
 import com.example.town_land_collect.util.ComUtil;
 import com.example.town_land_collect.util.CommonTypeUtil;
@@ -51,8 +48,7 @@ import com.example.town_land_collect.util.ToastUtil;
  * @author Eric
  * 
  */
-public class EditCollectionMarketDevelopmentTownshipActivity extends ActionBarActivity implements OnClickListener,
-		OnTouchListener {
+public class EditCollectionMarketDevelopmentTownshipActivity extends ActionBarActivity implements OnClickListener, OnTouchListener {
 
 	/** Fragment-manager **/
 	private Integer curFragmentParent = 1;// fragment父级
@@ -240,8 +236,7 @@ public class EditCollectionMarketDevelopmentTownshipActivity extends ActionBarAc
 	 * @return void
 	 */
 	private void initModel() {
-		ModelCollectionMarketDevelopmentTownship model = DataSupport.find(
-				ModelCollectionMarketDevelopmentTownship.class, locationInfo.getCollectionId());
+		ModelCollectionMarketDevelopmentTownship model = DataSupport.find(ModelCollectionMarketDevelopmentTownship.class, locationInfo.getCollectionId());
 		if (model != null) {
 			/** 基本信息 **/
 			edit_the_name.setText(model.getTHENAME());// 记录名称
@@ -422,7 +417,7 @@ public class EditCollectionMarketDevelopmentTownshipActivity extends ActionBarAc
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
-		getMenuInflater().inflate(R.menu.edit_collection_market_development_township, menu);
+		getMenuInflater().inflate(R.menu.edit_collection, menu);
 		return true;
 	}
 
@@ -431,6 +426,12 @@ public class EditCollectionMarketDevelopmentTownshipActivity extends ActionBarAc
 		int id = item.getItemId();
 		switch (id) {
 		case android.R.id.home:
+			this.finish();
+			return true;
+		case R.id.action_delete_record:
+			LocationInfo model = DataSupport.find(LocationInfo.class, locationInfo.getCollectionId());
+			model.delete();
+			Toast.makeText(this, "记录删除成功", Toast.LENGTH_SHORT).show();
 			this.finish();
 			return true;
 		default:
@@ -467,8 +468,7 @@ public class EditCollectionMarketDevelopmentTownshipActivity extends ActionBarAc
 					public void onClick(DialogInterface dialog, int which) {
 
 						StringBuffer sb = new StringBuffer();
-						sb.append(String.format("%d-%02d-%02d", datePicker.getYear(), datePicker.getMonth() + 1,
-								datePicker.getDayOfMonth()));
+						sb.append(String.format("%d-%02d-%02d", datePicker.getYear(), datePicker.getMonth() + 1, datePicker.getDayOfMonth()));
 						sb.append("  ");
 
 						edit_czsj.setText(sb);

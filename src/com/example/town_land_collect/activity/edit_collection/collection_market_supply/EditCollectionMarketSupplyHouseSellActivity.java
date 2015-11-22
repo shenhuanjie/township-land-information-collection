@@ -9,25 +9,6 @@ import java.util.List;
 
 import org.litepal.crud.DataSupport;
 
-import com.example.town_land_collect.R;
-import com.example.town_land_collect.R.id;
-import com.example.town_land_collect.R.layout;
-import com.example.town_land_collect.R.menu;
-import com.example.town_land_collect.activity.MyMapActivity;
-import com.example.town_land_collect.model.LocationInfo;
-import com.example.town_land_collect.model.market_business.ModelCollectionMarketBusinessHouseSell;
-import com.example.town_land_collect.model.market_business.ModelCollectionMarketBusinessRentOut;
-import com.example.town_land_collect.model.market_supply.ModelCollectionMarketSupplyHouseSell;
-import com.example.town_land_collect.util.CollectType;
-import com.example.town_land_collect.util.ComUtil;
-import com.example.town_land_collect.util.CommonTypeUtil;
-import com.example.town_land_collect.util.ImageUtil;
-import com.example.town_land_collect.util.ToastUtil;
-
-import android.support.v7.app.ActionBarActivity;
-import android.text.InputType;
-import android.util.DisplayMetrics;
-import android.util.Log;
 import android.app.ActionBar;
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -38,6 +19,10 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
+import android.support.v7.app.ActionBarActivity;
+import android.text.InputType;
+import android.util.DisplayMetrics;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.MotionEvent;
@@ -52,6 +37,17 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.example.town_land_collect.R;
+import com.example.town_land_collect.activity.MyMapActivity;
+import com.example.town_land_collect.model.LocationInfo;
+import com.example.town_land_collect.model.market_supply.ModelCollectionMarketSupplyHouseSell;
+import com.example.town_land_collect.util.CollectType;
+import com.example.town_land_collect.util.ComUtil;
+import com.example.town_land_collect.util.CommonTypeUtil;
+import com.example.town_land_collect.util.ImageUtil;
+import com.example.town_land_collect.util.ToastUtil;
 
 /**
  * 土地使用权出租交易信息
@@ -281,8 +277,7 @@ public class EditCollectionMarketSupplyHouseSellActivity extends ActionBarActivi
 	 * @return void
 	 */
 	private void initModel() {
-		ModelCollectionMarketSupplyHouseSell model = DataSupport.find(ModelCollectionMarketSupplyHouseSell.class,
-				locationInfo.getCollectionId());
+		ModelCollectionMarketSupplyHouseSell model = DataSupport.find(ModelCollectionMarketSupplyHouseSell.class, locationInfo.getCollectionId());
 		if (model != null) {
 			/** 基本信息 **/
 			setEditText(R.id.edit_the_name, "THENAME", model.getTHENAME());// 记录名称
@@ -489,7 +484,7 @@ public class EditCollectionMarketSupplyHouseSellActivity extends ActionBarActivi
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
-		getMenuInflater().inflate(R.menu.edit_collection_market_supply_house_sell, menu);
+		getMenuInflater().inflate(R.menu.edit_collection, menu);
 		return true;
 	}
 
@@ -498,6 +493,12 @@ public class EditCollectionMarketSupplyHouseSellActivity extends ActionBarActivi
 		int id = item.getItemId();
 		switch (id) {
 		case android.R.id.home:
+			this.finish();
+			return true;
+		case R.id.action_delete_record:
+			LocationInfo model = DataSupport.find(LocationInfo.class, locationInfo.getCollectionId());
+			model.delete();
+			Toast.makeText(this, "记录删除成功", Toast.LENGTH_SHORT).show();
 			this.finish();
 			return true;
 		default:

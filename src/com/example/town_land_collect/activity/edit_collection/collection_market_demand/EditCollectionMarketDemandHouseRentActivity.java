@@ -37,13 +37,12 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.town_land_collect.R;
 import com.example.town_land_collect.activity.MyMapActivity;
 import com.example.town_land_collect.model.LocationInfo;
-import com.example.town_land_collect.model.market_business.ModelCollectionMarketBusinessHouseSell;
 import com.example.town_land_collect.model.market_demand.ModelCollectionMarketDemandHouseRent;
-import com.example.town_land_collect.model.market_demand.ModelCollectionMarketDemandHouseSell;
 import com.example.town_land_collect.util.CollectType;
 import com.example.town_land_collect.util.ComUtil;
 import com.example.town_land_collect.util.CommonTypeUtil;
@@ -293,8 +292,7 @@ public class EditCollectionMarketDemandHouseRentActivity extends ActionBarActivi
 	 * @return void
 	 */
 	private void initModel() {
-		ModelCollectionMarketDemandHouseRent model = DataSupport.find(ModelCollectionMarketDemandHouseRent.class,
-				locationInfo.getCollectionId());
+		ModelCollectionMarketDemandHouseRent model = DataSupport.find(ModelCollectionMarketDemandHouseRent.class, locationInfo.getCollectionId());
 		if (model != null) {
 			/** 基本信息 **/
 			setEditText(R.id.edit_the_name, "THENAME", model.getTHENAME());// 记录名称
@@ -556,7 +554,7 @@ public class EditCollectionMarketDemandHouseRentActivity extends ActionBarActivi
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
-		getMenuInflater().inflate(R.menu.edit_collection_market_demand_house_rent, menu);
+		getMenuInflater().inflate(R.menu.edit_collection, menu);
 		return true;
 	}
 
@@ -565,6 +563,12 @@ public class EditCollectionMarketDemandHouseRentActivity extends ActionBarActivi
 		int id = item.getItemId();
 		switch (id) {
 		case android.R.id.home:
+			this.finish();
+			return true;
+		case R.id.action_delete_record:
+			LocationInfo model = DataSupport.find(LocationInfo.class, locationInfo.getCollectionId());
+			model.delete();
+			Toast.makeText(this, "记录删除成功", Toast.LENGTH_SHORT).show();
 			this.finish();
 			return true;
 		default:

@@ -250,7 +250,7 @@ public class EditCollectionMarketBusinessHouseRentActivity extends ActionBarActi
 					}
 					if (imagePathList != null) {
 						camorabitmap = ImageUtil.getImageThumbnail(imagePathList.get(0), width, height);
-						image_photo.setImageBitmap(camorabitmap); 
+						image_photo.setImageBitmap(camorabitmap);
 						// TODO
 						text_page.setText("第" + (imagePathListIndex + 1) + "张");
 						text_total.setText(",共" + imagePathList.size() + "张");
@@ -295,8 +295,7 @@ public class EditCollectionMarketBusinessHouseRentActivity extends ActionBarActi
 	 * @return void
 	 */
 	private void initModel() {
-		ModelCollectionMarketBusinessHouseRent model = DataSupport.find(ModelCollectionMarketBusinessHouseRent.class,
-				locationInfo.getCollectionId());
+		ModelCollectionMarketBusinessHouseRent model = DataSupport.find(ModelCollectionMarketBusinessHouseRent.class, locationInfo.getCollectionId());
 		if (model != null) {
 			/** 基本信息 **/
 			edit_the_name.setText(model.getTHENAME());// 记录名称
@@ -573,12 +572,17 @@ public class EditCollectionMarketBusinessHouseRentActivity extends ActionBarActi
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 		int id = item.getItemId();
+
 		switch (id) {
 		case android.R.id.home:
 			this.finish();
 			return true;
-			// case R.id.action_upload_record:
-			// Toast.makeText(this, "上传记录中,请稍候...", Toast.LENGTH_SHORT).show();
+		case R.id.action_delete_record:
+			LocationInfo model = DataSupport.find(LocationInfo.class, locationInfo.getCollectionId());
+			model.delete();
+			Toast.makeText(this, "记录删除成功", Toast.LENGTH_SHORT).show();
+			this.finish();
+			return true;
 		default:
 			break;
 		}
@@ -844,8 +848,7 @@ public class EditCollectionMarketBusinessHouseRentActivity extends ActionBarActi
 	private int saveCollectionInfo() {
 		int result = 0;
 		setCollectionInfo();
-		ModelCollectionMarketBusinessHouseRent model = DataSupport.find(ModelCollectionMarketBusinessHouseRent.class,
-				locationInfo.getCollectionId());
+		ModelCollectionMarketBusinessHouseRent model = DataSupport.find(ModelCollectionMarketBusinessHouseRent.class, locationInfo.getCollectionId());
 		/** 基本信息 **/
 		model.setTHENAME(value_the_name);// 记录名称
 		model.setTHECODE(value_the_code);// 记录代码
@@ -938,8 +941,7 @@ public class EditCollectionMarketBusinessHouseRentActivity extends ActionBarActi
 				// 将保存在本地的图片取出并按比例缩小后显示在界面上
 				camorabitmap = ImageUtil.getImageThumbnail(Environment.getExternalStorageDirectory() + "/temp.jpg", width, height);
 				image_photo.setImageBitmap(camorabitmap);
-				String filePath = ImageUtil.copyFile(Environment.getExternalStorageDirectory() + "/temp.jpg",
-						Environment.getExternalStorageDirectory() + "/");
+				String filePath = ImageUtil.copyFile(Environment.getExternalStorageDirectory() + "/temp.jpg", Environment.getExternalStorageDirectory() + "/");
 				imagePathList.add(filePath);
 				imagePathListIndex = imagePathList.size();
 				// TODO

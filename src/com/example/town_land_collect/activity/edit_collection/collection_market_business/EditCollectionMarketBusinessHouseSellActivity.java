@@ -37,6 +37,7 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.town_land_collect.R;
 import com.example.town_land_collect.activity.MyMapActivity;
@@ -291,8 +292,7 @@ public class EditCollectionMarketBusinessHouseSellActivity extends ActionBarActi
 	 * @return void
 	 */
 	private void initModel() {
-		ModelCollectionMarketBusinessHouseSell model = DataSupport.find(ModelCollectionMarketBusinessHouseSell.class,
-				locationInfo.getCollectionId());
+		ModelCollectionMarketBusinessHouseSell model = DataSupport.find(ModelCollectionMarketBusinessHouseSell.class, locationInfo.getCollectionId());
 		if (model != null) {
 			setEditText(R.id.edit_tdzl, "edit_tdzl", model.getTDZL());// 土地坐落
 			setSpinnerSelection(R.id.edit_qsxz, "edit_qsxz", model.getINDEX_QSXZ());// 权属性质
@@ -556,7 +556,7 @@ public class EditCollectionMarketBusinessHouseSellActivity extends ActionBarActi
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
-		getMenuInflater().inflate(R.menu.edit_collection_market_business_house_sell, menu);
+		getMenuInflater().inflate(R.menu.edit_collection, menu);
 		return true;
 	}
 
@@ -565,6 +565,12 @@ public class EditCollectionMarketBusinessHouseSellActivity extends ActionBarActi
 		int id = item.getItemId();
 		switch (id) {
 		case android.R.id.home:
+			this.finish();
+			return true;
+		case R.id.action_delete_record:
+			LocationInfo model = DataSupport.find(LocationInfo.class, locationInfo.getCollectionId());
+			model.delete();
+			Toast.makeText(this, "记录删除成功", Toast.LENGTH_SHORT).show();
 			this.finish();
 			return true;
 		default:

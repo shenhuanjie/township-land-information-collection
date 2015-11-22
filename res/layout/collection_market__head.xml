@@ -24,8 +24,8 @@
 
         <ImageButton
             android:id="@+id/fragment_collection_ibtn_save"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
             android:layout_marginRight="10dp"
@@ -37,10 +37,10 @@
             android:layout_width="25dp"
             android:layout_height="25dp"
             android:layout_centerVertical="true"
-            android:layout_marginRight="10dp"
             android:layout_toLeftOf="@+id/fragment_collection_ibtn_save"
             android:background="@drawable/imagebutton_clear_selector"
-            android:contentDescription="重置" />
+            android:contentDescription="重置"
+            android:visibility="gone" />
     </RelativeLayout>
 
     <LinearLayout

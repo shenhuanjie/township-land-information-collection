@@ -13,8 +13,6 @@ import org.litepal.tablemanager.Connector;
 
 import rmobile.platform.http.AsyncHttpResponseHandler;
 import android.annotation.SuppressLint;
-import android.app.ProgressDialog;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
@@ -47,7 +45,6 @@ import com.example.town_land_collect.util.ComUtil;
 import com.example.town_land_collect.view.ChangeColorView;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
-import com.tianditu.android.b.m;
 
 public class MainActivity extends FragmentActivity implements OnPageChangeListener, OnClickListener {
 	public FragmentTransaction mFragmentTransaction;
@@ -194,6 +191,7 @@ public class MainActivity extends FragmentActivity implements OnPageChangeListen
 					}
 				}
 			}
+			break;
 		default:
 			break;
 		}

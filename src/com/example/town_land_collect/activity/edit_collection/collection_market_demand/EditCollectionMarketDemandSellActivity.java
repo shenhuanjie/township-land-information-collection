@@ -37,6 +37,7 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.town_land_collect.R;
 import com.example.town_land_collect.activity.MyMapActivity;
@@ -542,7 +543,7 @@ public class EditCollectionMarketDemandSellActivity extends ActionBarActivity im
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
-		getMenuInflater().inflate(R.menu.edit_collection_market_demand_sell, menu);
+		getMenuInflater().inflate(R.menu.edit_collection, menu);
 		return true;
 	}
 
@@ -551,6 +552,12 @@ public class EditCollectionMarketDemandSellActivity extends ActionBarActivity im
 		int id = item.getItemId();
 		switch (id) {
 		case android.R.id.home:
+			this.finish();
+			return true;
+		case R.id.action_delete_record:
+			LocationInfo model = DataSupport.find(LocationInfo.class, locationInfo.getCollectionId());
+			model.delete();
+			Toast.makeText(this, "¼ÇÂ¼É¾³ý³É¹¦", Toast.LENGTH_SHORT).show();
 			this.finish();
 			return true;
 		default:

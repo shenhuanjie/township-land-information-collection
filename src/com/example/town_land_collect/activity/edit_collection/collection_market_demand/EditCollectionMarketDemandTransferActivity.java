@@ -37,12 +37,11 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.town_land_collect.R;
 import com.example.town_land_collect.activity.MyMapActivity;
 import com.example.town_land_collect.model.LocationInfo;
-import com.example.town_land_collect.model.market_demand.ModelCollectionMarketDemandSell;
-import com.example.town_land_collect.model.market_demand.ModelCollectionMarketDemandShareHolder;
 import com.example.town_land_collect.model.market_demand.ModelCollectionMarketDemandTransfer;
 import com.example.town_land_collect.util.CollectType;
 import com.example.town_land_collect.util.ComUtil;
@@ -292,8 +291,7 @@ public class EditCollectionMarketDemandTransferActivity extends ActionBarActivit
 	 * @return void
 	 */
 	private void initModel() {
-		ModelCollectionMarketDemandTransfer model = DataSupport.find(ModelCollectionMarketDemandTransfer.class,
-				locationInfo.getCollectionId());
+		ModelCollectionMarketDemandTransfer model = DataSupport.find(ModelCollectionMarketDemandTransfer.class, locationInfo.getCollectionId());
 		if (model != null) {
 			/** 基本信息 **/
 			setEditText(R.id.edit_the_name, "THENAME", model.getTHENAME());// 记录名称
@@ -541,7 +539,7 @@ public class EditCollectionMarketDemandTransferActivity extends ActionBarActivit
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
-		getMenuInflater().inflate(R.menu.edit_collection_market_demand_transfer, menu);
+		getMenuInflater().inflate(R.menu.edit_collection, menu);
 		return true;
 	}
 
@@ -550,6 +548,12 @@ public class EditCollectionMarketDemandTransferActivity extends ActionBarActivit
 		int id = item.getItemId();
 		switch (id) {
 		case android.R.id.home:
+			this.finish();
+			return true;
+		case R.id.action_delete_record:
+			LocationInfo model = DataSupport.find(LocationInfo.class, locationInfo.getCollectionId());
+			model.delete();
+			Toast.makeText(this, "记录删除成功", Toast.LENGTH_SHORT).show();
 			this.finish();
 			return true;
 		default:
